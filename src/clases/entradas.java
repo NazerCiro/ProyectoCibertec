@@ -5,4 +5,7 @@ public class entradas {
 	 String cirocabro;
 	 double suma = 0.1;
 	 int XD;
+	 double profe;
+	 double no_sea_cagon;
+	 double ponganos_20;
 }
