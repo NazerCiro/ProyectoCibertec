@@ -16,8 +16,6 @@ public class Login extends JFrame {
 	
 
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
-
 	/**
 	 * Launch the application.
 	 */
@@ -113,6 +111,60 @@ public class Login extends JFrame {
     lblMantenimiento.setBounds(10, 11, 127, 20);
     panel_1_1_1.add(lblMantenimiento);
     getContentPane().add(centerPanel, BorderLayout.CENTER);
+    
+    JPanel panel_2 = new JPanel();
+    panel_2.setBackground(new Color(139, 0, 0));
+    panel_2.setBounds(383, 0, 196, 461);
+    centerPanel.add(panel_2);
+    panel_2.setLayout(null);
+    
+    JPanel panel_3 = new JPanel();
+    panel_3.setBackground(new Color(63, 63, 63));
+    panel_3.setBounds(0, 0, 196, 166);
+    panel_2.add(panel_3);
+    panel_3.setLayout(null);
+    
+    JLabel lblNewLabel_2 = new JLabel("MATRICULA   ABIERTA");
+    lblNewLabel_2.setForeground(new Color(215, 215, 215));
+    lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 15));
+    lblNewLabel_2.setBounds(10, 45, 176, 63);
+    panel_3.add(lblNewLabel_2);
+    
+    JPanel panel_4 = new JPanel();
+    panel_4.setBackground(new Color(31, 31, 31));
+    panel_4.setBounds(0, 164, 196, 83);
+    panel_2.add(panel_4);
+    panel_4.setLayout(null);
+    
+    JLabel lblNewLabel_3 = new JLabel("REGISTRESE");
+    lblNewLabel_3.setForeground(new Color(192, 192, 192));
+    lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 16));
+    lblNewLabel_3.setBounds(47, 11, 115, 24);
+    panel_4.add(lblNewLabel_3);
+    
+    JLabel lblNewLabel_4 = new JLabel("AHORA");
+    lblNewLabel_4.setForeground(new Color(192, 192, 192));
+    lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 16));
+    lblNewLabel_4.setBounds(67, 46, 69, 14);
+    panel_4.add(lblNewLabel_4);
+    
+    JLabel lblNewLabel_5 = new JLabel("INSCRIBANSE");
+    lblNewLabel_5.setForeground(new Color(192, 192, 192));
+    lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 20));
+    lblNewLabel_5.setBounds(29, 283, 157, 18);
+    panel_2.add(lblNewLabel_5);
+    
+    JLabel lblNewLabel_6 = new JLabel("CONTACTANOS");
+    lblNewLabel_6.setForeground(new Color(192, 192, 192));
+    lblNewLabel_6.setFont(new Font("Tahoma", Font.BOLD, 16));
+    lblNewLabel_6.setBounds(40, 397, 134, 18);
+    panel_2.add(lblNewLabel_6);
+    
+    JLabel lblNewLabel_7 = new JLabel("(+51) 927-568-132");
+    lblNewLabel_7.setFont(new Font("Tahoma", Font.BOLD, 13));
+    lblNewLabel_7.setForeground(new Color(192, 192, 192));
+    lblNewLabel_7.setBounds(40, 436, 134, 14);
+    panel_2.add(lblNewLabel_7);
 }   
     }
 
