@@ -22,5 +22,12 @@ public class Arraylist1 {
 	public Arraylist1 obtener(int i) {
 		return list.get(i);
 	}
+	public Arraylist1 buscar(int codigo) {
+		for(int i = 0;i<tamanio();i++) {
+			if(obtener(i).getCodigo()==codigo) {
+				return obtener(i);
+			}
+		}
+			}
 
 }
