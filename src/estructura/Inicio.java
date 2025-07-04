@@ -31,7 +31,7 @@ public class Inicio extends JFrame {
         setLocationRelativeTo(null);
         getContentPane().setLayout(new BorderLayout());
 
-        // Left panel with vertical layout
+        // PANEL izquierdo (leftPanel)
         JPanel leftPanel = new JPanel();
         leftPanel.setBackground(new Color(139, 0, 0));
         leftPanel.setPreferredSize(new Dimension(205, 0));
@@ -54,7 +54,7 @@ public class Inicio extends JFrame {
         leftPanel.add(logoPanel);
         leftPanel.add(Box.createVerticalStrut(20));
 
-        // Menu panels as buttons
+        // Menu BOTONONES
         JPanel loginPanel = createMenuPanel("  LOGIN", 20);
         loginPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         loginPanel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -178,7 +178,7 @@ public class Inicio extends JFrame {
         JPanel panel = new JPanel();
         panel.setMaximumSize(new Dimension(147, 42));
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.setBorder(new EmptyBorder(30, 10, 30, 10)); // Add padding
+        panel.setBorder(new EmptyBorder(30, 10, 30, 10)); 
         JLabel label = new JLabel(text);
         label.setFont(new Font("Roboto SemiCondensed Medium", Font.PLAIN, fontSize));
         label.setAlignmentX(Component.CENTER_ALIGNMENT);
