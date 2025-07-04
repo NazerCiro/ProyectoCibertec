@@ -3,13 +3,17 @@ package clases;
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.Font;
+import org.eclipse.wb.swing.FocusTraversalOnArray;
+import java.awt.Component;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 public class LOGIN extends JFrame {
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-    private JPasswordField passwordField_1;
-    private JTextField textField;
+    private JPasswordField txtContraseña;
+    private JTextField txtUsuario;
 
 	public LOGIN() {
         setTitle("LOGIN");
@@ -19,7 +23,7 @@ public class LOGIN extends JFrame {
         getContentPane().setLayout(null);
         
         JPanel BASE = new JPanel();
-        BASE.setBackground(new Color(255, 255, 255));
+        BASE.setBackground(new Color(192, 192, 192));
         BASE.setBounds(0, 0, 850, 514);
         getContentPane().add(BASE);
         BASE.setLayout(null);
@@ -57,16 +61,47 @@ public class LOGIN extends JFrame {
         
         JLabel lblContraseña = new JLabel("CONTRASEÑA :");
         lblContraseña.setFont(new Font("Roboto Medium", Font.PLAIN, 15));
-        lblContraseña.setBounds(38, 370, 105, 14);
+        lblContraseña.setBounds(38, 376, 105, 14);
         BASE.add(lblContraseña);
         
-        passwordField_1 = new JPasswordField();
-        passwordField_1.setBounds(38, 413, 243, 20);
-        BASE.add(passwordField_1);
+        txtContraseña = new JPasswordField();
+        txtContraseña.setToolTipText("");
+        txtContraseña.setBounds(38, 413, 243, 20);
+        BASE.add(txtContraseña);
         
-        textField = new JTextField();
-        textField.setBounds(38, 327, 243, 20);
-        BASE.add(textField);
-        textField.setColumns(10);
+        txtUsuario = new JTextField();
+        txtUsuario.setBounds(38, 327, 243, 20);
+        BASE.add(txtUsuario);
+        txtUsuario.setColumns(10);
+        
+        
+        JPanel btnButton = new JPanel();
+        btnButton.addMouseListener(new MouseAdapter() {@Override
+        	public void mouseEntered(MouseEvent e) {
+        	btnButton.setBackground(new Color(255, 0, 0));
+        	}
+        	@Override
+        	public void mouseExited(MouseEvent e) {
+        		btnButton.setBackground(new Color(120, 18, 12));
+        	}
+        	
+            public void mouseClicked(MouseEvent e) {
+            	javax.swing.JOptionPane.showMessageDialog(null, "Iniciando sesión...");
+                 String usuario = txtUsuario.getText();
+                 String contraseña = new String(txtContraseña.getPassword());
+                 javax.swing.JOptionPane.showMessageDialog(null, "Usuario: " + usuario + "\nContraseña: " + contraseña);
+               }
+            });
+        
+        btnButton.setBackground(new Color(120, 18, 12));
+        btnButton.setBounds(38, 462, 132, 41);
+        BASE.add(btnButton);
+        btnButton.setLayout(null);
+        
+        JLabel lblIngresar = new JLabel("INGRESAR");
+        lblIngresar.setFont(new Font("Roboto Condensed Medium", Font.BOLD, 15));
+        lblIngresar.setForeground(new Color(255, 255, 255));
+        lblIngresar.setBounds(33, 11, 68, 22);
+        btnButton.add(lblIngresar);
     }
 }
