@@ -1,10 +1,13 @@
 
 package arreglo;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import clases.clasepadre;
 
 // Clase Estudiante
 class Estudiante {
@@ -89,9 +92,46 @@ public class Arraylist1 {
 			JOptionPane.showMessageDialog(null, "No se pudo grabar estudiantes");
 		}
 	}
-
 	private void cargarEstudiantes() {
-		// Implementar la lógica para cargar estudiantes desde un archivo si es
-		// necesario
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("estudiantes.txt"));
+			String linea;
+			while ((linea = br.readLine()) != null) {
+				String[] s = linea.split(";");
+				int codigo = Integer.parseInt(s[0]);
+				String nombre = s[1];
+				double nota1 = Double.parseDouble(s[2]);
+				double nota2 = Double.parseDouble(s[3]);
+				Estudiante est = new Estudiante(codigo, nombre, nota1, nota2);
+				adicionar(est);
+			}
+			br.close();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "No se pudo cargar estudiantes");
+		}
+	}
+
+	public void mostrarEstudiantes() {
+		for (int i = 0; i < tamanio(); i++) {
+			Estudiante est = obtener(i);
+			imprimir("Codigo: " + est.getCodigo() + ", Nombre: " + est.getNombre() + ", Nota1: "
+					+ est.getNota1() + ", Nota2: " + est.getNota2());
+		}
+	}
+	private void imprimir(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void eliminarPorCodigo(int codigo) {
+		Estudiante est = buscar(codigo);
+		if (est != null) {
+		    eliminar(est);
+            JOptionPane.showMessageDialog(null, "Estudiante eliminado con éxito");
+	}else 
+            JOptionPane.showMessageDialog(null, "Estudiante no encontrado");
+        
 	}
 }
+    
+
