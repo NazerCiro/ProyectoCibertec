@@ -5,6 +5,11 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+import clases.LOGIN;
+import clases.MANTENIMIENTO;
+import clases.MATRICULA;
+import clases.REGISTRO;
+
 public class Inicio extends JFrame {
     private static final long serialVersionUID = 1L;
 
@@ -49,14 +54,45 @@ public class Inicio extends JFrame {
         leftPanel.add(logoPanel);
         leftPanel.add(Box.createVerticalStrut(20));
 
-        // Menu panels
-        leftPanel.add(createMenuPanel("  LOGIN", 20));
+        // Menu panels as buttons
+        JPanel loginPanel = createMenuPanel("  LOGIN", 20);
+        loginPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        loginPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                new LOGIN().setVisible(true);
+            }
+        });
+        leftPanel.add(loginPanel);
         leftPanel.add(Box.createVerticalStrut(20));
-        leftPanel.add(createMenuPanel("  MATRICULA", 20));
+
+        JPanel matriculaPanel = createMenuPanel("  MATRICULA", 20);
+        matriculaPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        matriculaPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                new MATRICULA().setVisible(true);
+            }
+        });
+        leftPanel.add(matriculaPanel);
         leftPanel.add(Box.createVerticalStrut(20));
-        leftPanel.add(createMenuPanel("REGRISTRO", 20));
+
+        JPanel registroPanel = createMenuPanel("REGRISTRO", 20);
+        registroPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        registroPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                new REGISTRO().setVisible(true);
+            }
+        });
+        leftPanel.add(registroPanel);
         leftPanel.add(Box.createVerticalStrut(20));
-        leftPanel.add(createMenuPanel("MANTENIMIENTO", 16));
+
+        JPanel mantenimientoPanel = createMenuPanel("MANTENIMIENTO", 16);
+        mantenimientoPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        mantenimientoPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                new MANTENIMIENTO().setVisible(true);
+            }
+        });
+        leftPanel.add(mantenimientoPanel);
         leftPanel.add(Box.createVerticalGlue());
 
         getContentPane().add(leftPanel, BorderLayout.WEST);
@@ -152,5 +188,3 @@ public class Inicio extends JFrame {
         return panel;
     }
 }
-
- 
