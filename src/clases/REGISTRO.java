@@ -1,5 +1,7 @@
 package clases;
 import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 public class REGISTRO extends JFrame {
  /**
 	 * 
@@ -46,12 +48,12 @@ public REGISTRO() {
      getContentPane().add(textField_2);
      textField_2.setColumns(10);
      
-     JLabel lblNewLabel_3 = new JLabel("New label");
-     lblNewLabel_3.setBounds(242, 39, 46, 14);
+     JLabel lblNewLabel_3 = new JLabel("Aula:");
+     lblNewLabel_3.setBounds(276, 39, 46, 14);
      getContentPane().add(lblNewLabel_3);
      
-     JLabel lblNewLabel_4 = new JLabel("New label");
-     lblNewLabel_4.setBounds(242, 82, 46, 14);
+     JLabel lblNewLabel_4 = new JLabel("Curso:");
+     lblNewLabel_4.setBounds(276, 82, 46, 14);
      getContentPane().add(lblNewLabel_4);
      
      textField_3 = new JTextField();
@@ -70,5 +72,13 @@ public REGISTRO() {
      
      table = new JTable();
      scrollPane.setViewportView(table);
+     
+     JButton btnNewButton = new JButton("Registrar");
+     btnNewButton.addActionListener(new ActionListener() {
+     	public void actionPerformed(ActionEvent e) {
+     	}
+     });
+     btnNewButton.setBounds(313, 115, 89, 23);
+     getContentPane().add(btnNewButton);
  }
 }
