@@ -67,25 +67,25 @@ public class Inicio extends JFrame {
         // Right panel (panel2)
         JPanel panel2 = new JPanel();
         panel2.setBackground(new Color(139, 0, 0));
-        panel2.setPreferredSize(new Dimension(200, 0));
+        panel2.setPreferredSize(new Dimension(230, 0));
         panel2.setLayout(new BoxLayout(panel2, BoxLayout.Y_AXIS));
-        panel2.setBorder(new EmptyBorder(20, 10, 20, 10)); // Padding for the whole right panel
+        panel2.setBorder(new EmptyBorder(20, 0, 20, 0)); // Padding for the whole right panel
 
         // Subpanel: MATRICULA ABIERTA (panel3)
         JPanel panel3 = new JPanel();
         panel3.setBackground(new Color(63, 63, 63));
-        panel3.setMaximumSize(new Dimension(200, 166));
+        panel3.setMaximumSize(new Dimension(210, 66));
         panel3.setLayout(new BoxLayout(panel3, BoxLayout.Y_AXIS));
-        panel3.setBorder(new EmptyBorder(20, 10, 20, 10)); // Padding for panel3
+        panel3.setBorder(new EmptyBorder(20, 0, 20, 0)); // Padding for panel3
 
         JLabel lblNewLabel_2 = new JLabel("MATRICULA   ABIERTA");
         lblNewLabel_2.setForeground(new Color(215, 215, 215));
         lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 15));
         lblNewLabel_2.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        panel3.add(Box.createVerticalStrut(10));
+        panel3.add(Box.createVerticalStrut(100));
         panel3.add(lblNewLabel_2);
-        panel3.add(Box.createVerticalStrut(10));
+        panel3.add(Box.createVerticalStrut(100));
         panel2.add(panel3);
 
         // Subpanel: REGISTRESE AHORA (panel4)
@@ -93,7 +93,7 @@ public class Inicio extends JFrame {
         panel4.setBackground(new Color(31, 31, 31));
         panel4.setMaximumSize(new Dimension(200, 83));
         panel4.setLayout(new BoxLayout(panel4, BoxLayout.Y_AXIS));
-        panel4.setBorder(new EmptyBorder(10, 10, 10, 10)); // Padding for panel4
+        panel4.setBorder(new EmptyBorder(20, 0, 20, 0)); // Padding for panel4
 
         JLabel lblNewLabel_3 = new JLabel("REGISTRESE");
         lblNewLabel_3.setForeground(new Color(192, 192, 192));
@@ -104,11 +104,11 @@ public class Inicio extends JFrame {
         lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 16));
         lblNewLabel_4.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        panel4.add(Box.createVerticalStrut(5));
+        panel4.add(Box.createVerticalStrut(30));
         panel4.add(lblNewLabel_3);
         panel4.add(Box.createVerticalStrut(5));
         panel4.add(lblNewLabel_4);
-        panel4.add(Box.createVerticalStrut(5));
+        panel4.add(Box.createVerticalStrut(30));
         panel2.add(panel4);
 
         panel2.add(Box.createVerticalGlue());
