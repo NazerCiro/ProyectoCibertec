@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-import clases.clasepadre;
+import clases.MatriculaData;
 
 // Clase Estudiante
 class Estudiante {
