@@ -106,7 +106,7 @@ public class Inicio extends JFrame {
 
         getContentPane().add(leftPanel, BorderLayout.WEST);
 
-        // Center panel with scalable image
+  
         JPanel centerPanel = new JPanel(new BorderLayout());
         centerPanel.setBackground(new Color(248, 248, 255));
 
@@ -114,7 +114,7 @@ public class Inicio extends JFrame {
         ScalableImageLabel lblDecoracion = new ScalableImageLabel(decoracionIcon);
         centerPanel.add(lblDecoracion, BorderLayout.CENTER);
 
-        // Right panel
+
         JPanel panel2 = new JPanel();
         panel2.setBackground(new Color(139, 0, 0));
         panel2.setPreferredSize(new Dimension(230, 0));
@@ -196,7 +196,7 @@ public class Inicio extends JFrame {
         return panel;
     }
 
-    // Custom JLabel for scalable image
+    
     class ScalableImageLabel extends JLabel {
         private static final long serialVersionUID = 1L;
         private Image image;

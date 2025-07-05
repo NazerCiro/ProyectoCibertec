@@ -9,7 +9,7 @@ import java.awt.event.MouseEvent;
 public class LOGIN extends JFrame {
     /**
 	 * 
-	 */
+	 */	
 	private static final long serialVersionUID = 1L;
     private JPasswordField txtContraseña;
     private JTextField txtUsuario;

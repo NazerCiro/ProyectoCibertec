@@ -2,6 +2,8 @@ package clases;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class MANTENIMIENTO extends JFrame {
     private static final long serialVersionUID = 1L;
@@ -27,6 +29,18 @@ public class MANTENIMIENTO extends JFrame {
         JTextField txtNombre = createField(mainPanel, "Nombre completo:");
         JTextField txtCorreo = createField(mainPanel, "Correo electrónico:");
         JTextField txtTelefono = createField(mainPanel, "Teléfono:");
+
+
+        txtTelefono.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+
+                if (!Character.isDigit(c) || txtTelefono.getText().length() >= 9) {
+                    e.consume();
+                }
+            }
+        });
+
         JTextArea txtDescripcion = new JTextArea(5, 20);
         txtDescripcion.setLineWrap(true);
         txtDescripcion.setWrapStyleWord(true);
@@ -52,17 +66,22 @@ public class MANTENIMIENTO extends JFrame {
         btnEnviar.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         btnEnviar.addActionListener(e -> {
+            String telefono = txtTelefono.getText();
+
             if (txtNombre.getText().isEmpty() || txtCorreo.getText().isEmpty() ||
-                txtTelefono.getText().isEmpty() || txtDescripcion.getText().isEmpty()) {
+                telefono.isEmpty() || txtDescripcion.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.", "Error", JOptionPane.ERROR_MESSAGE);
+            } else if (telefono.length() != 9) {
+                JOptionPane.showMessageDialog(this, "El teléfono debe tener exactamente 9 números.", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
                 Object[] reclamo = new Object[]{
                     txtNombre.getText(),
                     txtCorreo.getText(),
-                    txtTelefono.getText(),
+                    telefono,
                     txtDescripcion.getText()
                 };
                 BaseDeDatosReclamos.agregarReclamo(reclamo);
+                BaseDeDatosReporte.guardarReporte(txtNombre.getText(), txtCorreo.getText(), txtTelefono.getText(), txtDescripcion.getText());
                 JOptionPane.showMessageDialog(this, "¡Reclamo enviado!\nGracias por ayudarnos a mejorar.", "Confirmación", JOptionPane.INFORMATION_MESSAGE);
                 txtNombre.setText("");
                 txtCorreo.setText("");
@@ -74,6 +93,7 @@ public class MANTENIMIENTO extends JFrame {
         mainPanel.add(btnEnviar);
 
         setContentPane(mainPanel);
+     
     }
 
     private JTextField createField(JPanel panel, String label) {
@@ -94,4 +114,3 @@ public class MANTENIMIENTO extends JFrame {
         return field;
     }
 }
-

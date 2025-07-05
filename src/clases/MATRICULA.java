@@ -99,6 +99,10 @@ public class MATRICULA extends JFrame implements ActionListener {
                     JOptionPane.showMessageDialog(contentPane, "Solo se permiten números en el campo DNI", "Error", JOptionPane.ERROR_MESSAGE);
                     txtDni.setText(""); 
                 }
+                // Limitar a máximo 8 dígitos
+                if (texto.length() > 8) {
+                    txtDni.setText(texto.substring(0, 8));
+                }
             }
         });
 
@@ -149,6 +153,7 @@ public class MATRICULA extends JFrame implements ActionListener {
         txtCosto.setBounds(113, 320, 103, 20);
         contentPane.add(txtCosto);
         txtCosto.setColumns(10);
+        txtCosto.setEditable(false);
 
         JLabel lblNewLabel_9 = new JLabel("Nombre del Apoderado:");
         lblNewLabel_9.setForeground(Color.WHITE);
@@ -160,6 +165,8 @@ public class MATRICULA extends JFrame implements ActionListener {
         txtFecha.setBounds(113, 351, 103, 20);
         contentPane.add(txtFecha);
         txtFecha.setColumns(10);
+        txtFecha.setText(java.time.LocalDate.now().toString());
+        txtFecha.setEditable(false); 
 
         btnMatriculate = new JButton("Matriculate");
         btnMatriculate.setForeground(Color.BLACK);
@@ -219,8 +226,10 @@ public class MATRICULA extends JFrame implements ActionListener {
         String fecha = txtFecha.getText();
         String nomApoderado = txtNomApoderado.getText();
 
-        // Save data to BaseDeDatos
+        
         BaseDeDatos.guardarDatos(nombre, apellidos, dni, sede, horario, curso, costo, fecha, nomApoderado);
+
+        BaseDeDatosRegistro.guardarRegistro(nombre, apellidos, dni, sede, horario, curso, costo, fecha, nomApoderado);
 
         textArea.setText("Nombre: " + nombre + "\n" + "Apellidos: " + apellidos + "\n" + "DNI: " + dni + "\n" + "Sede: "
                 + sede + "\n" + "Horario: " + horario + "\n" + "Curso: " + curso + "\n" + "-----------------------------------------------------" + "\n" + "Costo Total: " + costo + "\n"
@@ -266,9 +275,8 @@ public class MATRICULA extends JFrame implements ActionListener {
         }
 
         if (curso != null) {
-            txtFecha.setText("06/03/2025");
         } else {
-            txtFecha.setText("");
+            txtFecha.setText("05/07/2025");
         }
     }
 }
