@@ -75,7 +75,7 @@ public class Inicio extends JFrame {
         leftPanel.add(matriculaPanel);
         leftPanel.add(Box.createVerticalStrut(20));
 
-        JPanel registroPanel = createMenuPanel("REGRISTRO", 20);
+        JPanel registroPanel = createMenuPanel("REGISTRO", 20);
         registroPanel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         registroPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
