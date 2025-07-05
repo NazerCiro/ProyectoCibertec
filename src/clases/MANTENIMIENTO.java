@@ -1,7 +1,6 @@
 package clases;
 
 import javax.swing.*;
-<<<<<<< HEAD
 import java.awt.*;
 
 public class MANTENIMIENTO extends JFrame {
@@ -95,17 +94,4 @@ public class MANTENIMIENTO extends JFrame {
         return field;
     }
 }
-=======
-public class MANTENIMIENTO extends JFrame {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 
-	public MANTENIMIENTO() {
-        setTitle("MANTENIMIENTO");
-        setSize(400, 300);
-        setLocationRelativeTo(null);
-    }
-}
->>>>>>> branch 'master' of https://github.com/NazerCiro/ProyectoCibertec
