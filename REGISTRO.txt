@@ -1,0 +1,30 @@
+Nombre: XD
+Apellidos: xd
+DNI: 11111111
+Sede: CALLAO
+Horario: TARDE( 1:00 PM - 7:30 PM )
+Curso: ARITMETICA
+Costo: S/. 120.00
+Fecha: 2025-07-05
+Nombre del Apoderado: XDD
+-----------------------------------------------------
+Nombre: XD
+Apellidos: XD
+DNI: 12333333
+Sede: SAN BARTOLO
+Horario: TARDE( 1:00 PM - 7:30 PM )
+Curso: ARITMETICA
+Costo: S/. 120.00
+Fecha: 2025-07-05
+Nombre del Apoderado: XDDD
+-----------------------------------------------------
+Nombre: xd
+Apellidos: xd
+DNI: 21321331
+Sede: CALLAO
+Horario: MAÑANA (7:00 AM - 1:00 AM)
+Curso: ARITMETICA
+Costo: S/. 120.00
+Fecha: 2025-07-05
+Nombre del Apoderado: qUISPE
+-----------------------------------------------------

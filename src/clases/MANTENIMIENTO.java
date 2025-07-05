@@ -34,7 +34,7 @@ public class MANTENIMIENTO extends JFrame {
         txtTelefono.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
                 char c = e.getKeyChar();
-
+               
                 if (!Character.isDigit(c) || txtTelefono.getText().length() >= 9) {
                     e.consume();
                 }
@@ -81,7 +81,7 @@ public class MANTENIMIENTO extends JFrame {
                     txtDescripcion.getText()
                 };
                 BaseDeDatosReclamos.agregarReclamo(reclamo);
-                BaseDeDatosReporte.guardarReporte(txtNombre.getText(), txtCorreo.getText(), txtTelefono.getText(), txtDescripcion.getText());
+                BaseDeDatosReporte.guardarReporte(txtNombre.getText(), txtCorreo.getText(), telefono, txtDescripcion.getText());
                 JOptionPane.showMessageDialog(this, "¡Reclamo enviado!\nGracias por ayudarnos a mejorar.", "Confirmación", JOptionPane.INFORMATION_MESSAGE);
                 txtNombre.setText("");
                 txtCorreo.setText("");
@@ -93,7 +93,6 @@ public class MANTENIMIENTO extends JFrame {
         mainPanel.add(btnEnviar);
 
         setContentPane(mainPanel);
-     
     }
 
     private JTextField createField(JPanel panel, String label) {

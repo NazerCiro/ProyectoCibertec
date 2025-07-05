@@ -279,4 +279,6 @@ public class MATRICULA extends JFrame implements ActionListener {
             txtFecha.setText("05/07/2025");
         }
     }
+
 }
+
