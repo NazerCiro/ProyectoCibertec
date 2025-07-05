@@ -80,7 +80,9 @@ public class MANTENIMIENTO extends JFrame {
                     telefono,
                     txtDescripcion.getText()
                 };
+                //base de datos temporal (1era prueba)
                 BaseDeDatosReclamos.agregarReclamo(reclamo);
+                //base de datos permanente
                 BaseDeDatosReporte.guardarReporte(txtNombre.getText(), txtCorreo.getText(), telefono, txtDescripcion.getText());
                 JOptionPane.showMessageDialog(this, "¡Reclamo enviado!\nGracias por ayudarnos a mejorar.", "Confirmación", JOptionPane.INFORMATION_MESSAGE);
                 txtNombre.setText("");
@@ -93,12 +95,12 @@ public class MANTENIMIENTO extends JFrame {
         mainPanel.add(btnEnviar);
 
         setContentPane(mainPanel);
-    }
-
+    }	
+    	
     private JTextField createField(JPanel panel, String label) {
         JLabel lbl = new JLabel(label);
         lbl.setForeground(Color.WHITE);
-        lbl.setFont(new Font("Roboto", Font.BOLD, 15));
+        lbl.setFont(new Font("Roboto", Font.BOLD, 15));	
         lbl.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel.add(lbl);
 

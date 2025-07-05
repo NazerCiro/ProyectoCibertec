@@ -160,7 +160,6 @@ public class MATRICULA extends JFrame implements ActionListener {
         lblNewLabel_9.setBounds(10, 420, 186, 21);
         lblNewLabel_9.setFont(new Font("Roboto Medium", Font.BOLD, 15));
         contentPane.add(lblNewLabel_9);
-
         txtFecha = new JTextField();
         txtFecha.setBounds(113, 351, 103, 20);
         contentPane.add(txtFecha);
@@ -225,10 +224,10 @@ public class MATRICULA extends JFrame implements ActionListener {
         String costo = txtCosto.getText();
         String fecha = txtFecha.getText();
         String nomApoderado = txtNomApoderado.getText();
-
         
+        //base de datos temporal	
         BaseDeDatos.guardarDatos(nombre, apellidos, dni, sede, horario, curso, costo, fecha, nomApoderado);
-
+        //base de datos permanente
         BaseDeDatosRegistro.guardarRegistro(nombre, apellidos, dni, sede, horario, curso, costo, fecha, nomApoderado);
 
         textArea.setText("Nombre: " + nombre + "\n" + "Apellidos: " + apellidos + "\n" + "DNI: " + dni + "\n" + "Sede: "
