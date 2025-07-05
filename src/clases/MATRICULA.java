@@ -24,25 +24,25 @@ public class MATRICULA extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField txtNombre;
+	private JTextField txtApellidos;
 	private JLabel lblNewLabel_2;
-	private JTextField textField_2;
+	private JTextField txtNomApoderado;
 	private JLabel lblNewLabel_3;
 	private JComboBox comboBox;
 	private JLabel lblNewLabel_4;
-	private JTextField textField_3;
+	private JTextField txtDni;
 	private JLabel lblNewLabel_5;
-	private JComboBox comboBox_1;
+	private JComboBox cboSede;
 	private JLabel lblNewLabel_6;
-	private JComboBox comboBox_2;
+	private JComboBox cboHorario;
 	private JLabel lblNewLabel_7;
-	private JComboBox comboBox_3;
+	private JComboBox cboCursos;
 	private JLabel lblNewLabel_8;
-	private JTextField textField_4;
+	private JTextField txtCosto;
 	private JLabel lblNewLabel_9;
-	private JTextField textField_5;
-	private JButton btnNewButton;
+	private JTextField txtFecha;
+	private JButton btnMatriculate;
 	private JScrollPane scrollPane;
 	private JTextArea textArea;
 	private JLabel lblLogo;
@@ -91,15 +91,15 @@ public class MATRICULA extends JFrame implements ActionListener {
 		lblNewLabel_1.setFont(new Font("Roboto Medium", Font.BOLD, 15));
 		contentPane.add(lblNewLabel_1);
 		
-		textField = new JTextField();
-		textField.setBounds(113, 98, 103, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtNombre = new JTextField();
+		txtNombre.setBounds(113, 98, 103, 20);
+		contentPane.add(txtNombre);
+		txtNombre.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(113, 135, 103, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		txtApellidos = new JTextField();
+		txtApellidos.setBounds(113, 135, 103, 20);
+		contentPane.add(txtApellidos);
+		txtApellidos.setColumns(10);
 		
 		lblNewLabel_2 = new JLabel("Fecha:");
 		lblNewLabel_2.setForeground(new Color(255, 255, 255));
@@ -107,10 +107,10 @@ public class MATRICULA extends JFrame implements ActionListener {
 		lblNewLabel_2.setFont(new Font("Roboto Medium", Font.BOLD, 15));
 		contentPane.add(lblNewLabel_2);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(10, 452, 206, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		txtNomApoderado = new JTextField();
+		txtNomApoderado.setBounds(10, 452, 206, 20);
+		contentPane.add(txtNomApoderado);
+		txtNomApoderado.setColumns(10);
 		
 		lblNewLabel_3 = new JLabel("Año:");
 		lblNewLabel_3.setForeground(new Color(255, 255, 255));
@@ -130,10 +130,10 @@ public class MATRICULA extends JFrame implements ActionListener {
 		lblNewLabel_4.setFont(new Font("Roboto Medium", Font.BOLD, 15));
 		contentPane.add(lblNewLabel_4);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(113, 166, 103, 20);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		txtDni = new JTextField();
+		txtDni.setBounds(113, 166, 103, 20);
+		contentPane.add(txtDni);
+		txtDni.setColumns(10);
 		
 		lblNewLabel_5 = new JLabel("SEDES:");
 		lblNewLabel_5.setForeground(new Color(255, 255, 255));
@@ -141,11 +141,11 @@ public class MATRICULA extends JFrame implements ActionListener {
 		lblNewLabel_5.setFont(new Font("Roboto Medium", Font.BOLD, 15));
 		contentPane.add(lblNewLabel_5);
 		
-		comboBox_1 = new JComboBox();
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"CALLAO", "SAN BARTOLO", "COMAS", "SAN ISIDRO"}));
-		comboBox_1.setFont(new Font("Roboto Medium", Font.PLAIN, 12));
-		comboBox_1.setBounds(113, 206, 103, 22);
-		contentPane.add(comboBox_1);
+		cboSede = new JComboBox();
+		cboSede.setModel(new DefaultComboBoxModel(new String[] {"CALLAO", "SAN BARTOLO", "COMAS", "SAN ISIDRO"}));
+		cboSede.setFont(new Font("Roboto Medium", Font.PLAIN, 12));
+		cboSede.setBounds(113, 206, 103, 22);
+		contentPane.add(cboSede);
 		
 		lblNewLabel_6 = new JLabel("Horario:");
 		lblNewLabel_6.setForeground(new Color(255, 255, 255));
@@ -153,11 +153,11 @@ public class MATRICULA extends JFrame implements ActionListener {
 		lblNewLabel_6.setFont(new Font("Roboto Medium", Font.BOLD, 15));
 		contentPane.add(lblNewLabel_6);
 		
-		comboBox_2 = new JComboBox();
-		comboBox_2.setFont(new Font("Roboto Medium", Font.PLAIN, 12));
-		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {"MAÑANA (7:00 AM - 1:00 AM)", "TARDE( 1:00 PM - 7:30 PM )"}));
-		comboBox_2.setBounds(113, 239, 103, 22);
-		contentPane.add(comboBox_2);
+		cboHorario = new JComboBox();
+		cboHorario.setFont(new Font("Roboto Medium", Font.PLAIN, 12));
+		cboHorario.setModel(new DefaultComboBoxModel(new String[] {"MAÑANA (7:00 AM - 1:00 AM)", "TARDE( 1:00 PM - 7:30 PM )"}));
+		cboHorario.setBounds(113, 239, 103, 22);
+		contentPane.add(cboHorario);
 		
 		lblNewLabel_7 = new JLabel("Cursos:");
 		lblNewLabel_7.setForeground(new Color(255, 255, 255));
@@ -165,11 +165,11 @@ public class MATRICULA extends JFrame implements ActionListener {
 		lblNewLabel_7.setFont(new Font("Roboto Medium", Font.BOLD, 15));
 		contentPane.add(lblNewLabel_7);
 		
-		comboBox_3 = new JComboBox();
-		comboBox_3.setFont(new Font("Roboto Medium", Font.PLAIN, 13));
-		comboBox_3.setModel(new DefaultComboBoxModel(new String[] {"ALGEBRA", "ARITMETICA", "GEOMETRIA", "GEOGRAFIA", "BIOLOGIA", "TRIGONOMETRIA", "RAZ.MATEMATICO", "INGLES", "CIENCIA", "HISTORIA "}));
-		comboBox_3.setBounds(113, 280, 103, 22);
-		contentPane.add(comboBox_3);
+		cboCursos = new JComboBox();
+		cboCursos.setFont(new Font("Roboto Medium", Font.PLAIN, 13));
+		cboCursos.setModel(new DefaultComboBoxModel(new String[] {"ALGEBRA", "ARITMETICA", "GEOMETRIA", "GEOGRAFIA", "BIOLOGIA", "TRIGONOMETRIA", "RAZ.MATEMATICO", "INGLES", "CIENCIA", "HISTORIA "}));
+		cboCursos.setBounds(113, 280, 103, 22);
+		contentPane.add(cboCursos);
 		
 		lblNewLabel_8 = new JLabel("Costo:");
 		lblNewLabel_8.setForeground(new Color(255, 255, 255));
@@ -177,10 +177,10 @@ public class MATRICULA extends JFrame implements ActionListener {
 		lblNewLabel_8.setFont(new Font("Roboto Medium", Font.BOLD, 15));
 		contentPane.add(lblNewLabel_8);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(113, 320, 103, 20);
-		contentPane.add(textField_4);
-		textField_4.setColumns(10);
+		txtCosto = new JTextField();
+		txtCosto.setBounds(113, 320, 103, 20);
+		contentPane.add(txtCosto);
+		txtCosto.setColumns(10);
 		
 		lblNewLabel_9 = new JLabel("Nombre del Apoderado:");
 		lblNewLabel_9.setForeground(new Color(255, 255, 255));
@@ -188,18 +188,18 @@ public class MATRICULA extends JFrame implements ActionListener {
 		lblNewLabel_9.setFont(new Font("Roboto Medium", Font.BOLD, 15));
 		contentPane.add(lblNewLabel_9);
 		
-		textField_5 = new JTextField();
-		textField_5.setBounds(113, 351, 103, 20);
-		contentPane.add(textField_5);
-		textField_5.setColumns(10);
+		txtFecha = new JTextField();
+		txtFecha.setBounds(113, 351, 103, 20);
+		contentPane.add(txtFecha);
+		txtFecha.setColumns(10);
 		
-		btnNewButton = new JButton("Matriculate");
-		btnNewButton.setForeground(new Color(0, 0, 0));
-		btnNewButton.setBackground(new Color(175, 18, 12));
-		btnNewButton.setFont(new Font("Roboto Medium", Font.BOLD, 15));
-		btnNewButton.setBounds(77, 483, 121, 23);
-		btnNewButton.addActionListener(this);
-		contentPane.add(btnNewButton);
+		btnMatriculate = new JButton("Matriculate");
+		btnMatriculate.setForeground(new Color(0, 0, 0));
+		btnMatriculate.setBackground(new Color(175, 18, 12));
+		btnMatriculate.setFont(new Font("Roboto Medium", Font.BOLD, 15));
+		btnMatriculate.setBounds(77, 483, 121, 23);
+		btnMatriculate.addActionListener(this);
+		contentPane.add(btnMatriculate);
 		
 		scrollPane = new JScrollPane();
 		scrollPane.setBounds(10, 512, 584, 226);
@@ -225,7 +225,7 @@ public class MATRICULA extends JFrame implements ActionListener {
 		lblLogo.setIcon(new ImageIcon(MATRICULA.class.getResource("/Imagenes/LOGO_REAL.png")));
 	}
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == btnNewButton) {
+		if (e.getSource() == btnMatriculate) {
 			actionPerformedBtnNewButton(e);
 		}
 	}
